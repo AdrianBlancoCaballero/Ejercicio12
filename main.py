@@ -19,17 +19,16 @@ class FindPal:
 for linea in archivo:
     palabras[linea.strip()] = []
 
-print("Lista palabras: \n", palabras)
-
 archivo = open(FRASES, "r")
 
-for frase in archivo:
-    frases.append(frase.strip())
+for f in archivo:
+    frases.append(f.strip())
 
-    for palabra in palabras:
-        palabras[palabra].append(frase.lower().count(palabra))
+    for p in palabras:
+        palabras[p].append(f.lower().count(p))
 
 archivo.close()
 
+print("Lista palabras: \n", palabras)
 print("Frases: \n", frases)
 print("Palabras en frases: \n", palabras)
